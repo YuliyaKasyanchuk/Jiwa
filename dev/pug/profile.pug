@@ -1,0 +1,101 @@
+doctype html
+html(amp lang="en")
+	include templates/head
+
+	body#top-scroll
+		div.overlay-bg
+	
+		include templates/header
+		div.wrapper(style="background: url('img/bg-2.png')")
+
+			section#my-profile
+				.container
+					.profile
+						.row
+							h2 МОЙ ПРОФИЛЬ
+							.row
+								.col-xs-12
+									p.blue-p ДАННЫЕ ПОКУПАТЕЛЯ
+									div.data-info
+										div.data
+											p.form-data Имя 
+											span Елена Давыденко
+										div.data
+											p.form-data E-mail 
+											span delena@gmail.com.ua
+										div.data
+											p.form-data Пароль 
+											span *****
+										div.data
+											p.form-data Адрес 
+											span Киев
+										div.data
+											p.form-data Телефон 
+											span (097) 335-80-77
+										a.add(href="#popup-change") ДОБАВИТЬ ИЛИ ВНЕСТИ ИЗМЕНЕНИЯ
+										.row
+											.col-xs-12.col-md-6
+												div.like-block
+													img(src="img/like.png" alt="Мне понравилось")
+													a.like-link(href="like.html") МНЕ ПОНРАВИЛОСЬ (#[span.like-count 2])
+											.col-xs-12.col-md-6
+												div.buy-block
+													img(src="img/bag.png" alt="Корзина")
+													a.like-link(href="basket.html") КОРЗИНА (#[span.buy-count пусто])
+							.row
+								.col-xs-12
+									.row
+										.col-xs-12
+											p.blue-p ЗАДАТЬ ВОПРОС
+									form.ask-form
+
+										.row
+											.col-xs-12.col-md-6
+												div.input-group
+													label(required) Имя*
+													input(type="text")
+											.col-xs-12.col-md-6
+												div.input-group
+													label(required) Тема*
+													input(type="text")
+											.col-xs-12.col-md-6
+												div.input-group
+													label(required) CAPTCHA*
+													div.g-recaptcha(data-sitekey="")
+													div.text-danger#recaptchaError
+											.col-xs-12.col-md-6
+												div.input-group
+													label(required) Сообщение*
+													textarea(type="text")
+										.row
+											.col-xs-12
+												a.btn.send(href="#send-message") ОТПРАВИТЬ
+			div#popup-change.popup-change
+					p.blue-p ДОБАВИТЬ ИЛИ ВНЕСТИ ИЗМЕНЕНИЯ
+					form.my-form
+						div.input-group
+							input(placeholder="Имя:" type="text" required)
+							img.popup-icon(src='img/user.png' alt='Имя')
+						div.input-group
+							input(placeholder="E-mail:" type="email" required)
+							img.popup-icon(src='img/env.png' alt='E-mail')
+						div.input-group
+							input(placeholder="Пароль:" type="password" required)
+							img.popup-icon(src='img/lock.png' alt='Пароль')
+						div.input-group
+							input(placeholder="Адрес:" type="text" required)
+							img.popup-icon(src='img/adr.png' alt='Адрес')
+						div.input-group
+							input(placeholder="Телефон:" type="tel" required)
+							img.popup-icon(src='img/tel.ico' alt='Телефон')
+						div.input-group
+							input#checkBox.inline(type="checkbox")
+							label.inline(for="checkBox") Подписаться на рассылку
+						input.button(type="submit", value="Внести изменения" )
+			div#send-message
+				p Сообщение отправлено.
+				span.close &times;
+		figure#scroll-top
+			a.slowly(href="#header" data-scroll)
+				i.fa.fa-chevron-up
+		include templates/footer

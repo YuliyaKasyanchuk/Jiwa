@@ -1,0 +1,168 @@
+doctype html
+html(amp lang="en")
+	include templates/head
+
+	body#top-scroll
+		div.overlay-bg
+		// include templates/header
+		header.no-shadow
+			.container
+				.row
+					.col-xs-12
+						ul.header-menu__list.menu
+							
+							li
+								a.active(href="index.html") Главная
+							li
+								a(href="about-us.html") О нас
+							
+							li.dropdown
+								a.dropdown-toggle(href="category.html" data-toggle="dropdown") Магазин
+								ul.dropdown-menu.mini-menu
+									li
+										a.title.drop-menu(href="" data-toggle="dropdown") БРЕНДЫ
+											ul.child
+												li
+													a.no-underline(href="brand.html") Bali Balance
+												li
+													a.no-underline(href="brand.html") Bali Radiance
+												li
+													a.no-underline(href="brand.html") Virgin Coconut Oil
+									li
+										a.title.drop-menu(href="" data-toggle="dropdown") КАТЕГОРИИ
+											ul.child
+												li
+													a.no-underline(href="category.html") Лицо
+												li
+													a.no-underline(href="category.html") Тело
+												li
+													a.no-underline(href="category.html") Ароматерапия
+												li
+													a.no-underline(href="category.html") Кокосовое Масло
+
+									li
+										a.title(href="category.html") Смотреть все 
+
+							li
+								a(href="contacts.html") Контакты
+							li
+								a.modal(href="profile.html") Мой профиль
+							li
+								a.basket-decor(href="basket.html") Корзина #[span.orders 1]
+						a.menu-link(href="#menu")
+							span
+			div.menu-list
+				ul.menu
+					li.logo-item
+						a(href="index.html")
+							img(src="img/logo-sm.png" alt="Jiwa")
+					li
+						a.active(href="index.html") Главная
+					li
+						a(href="about-us.html") О нас
+					li.dropdown.has-sub
+						a.dropdown-toggle(href="category.html" data-toggle="dropdown") Магазин #[i.fa.fa-chevron-down.arrow]
+						ul.dropdown-menu.mini-menu
+							li.dropdown.has-sub
+								a.title.drop-menu(href="" data-toggle="dropdown") БРЕНДЫ
+									ul
+										li
+											a.no-underline(href="brand.html") Bali Balance
+										li
+											a.no-underline(href="brand.html") Bali Radiance
+										li
+											a.no-underline(href="brand.html") Virgin Coconut Oil
+							li.dropdown.has-sub
+								a.title.drop-menu(href="" data-toggle="dropdown") КАТЕГОРИИ
+									ul
+										li
+											a.no-underline(href="category.html") Лицо
+										li
+											a.no-underline(href="category.html") Тело
+										li
+											a.no-underline(href="category.html") Ароматерапия
+										li
+											a.no-underline(href="category.html") Кокосовое Масло
+
+							li
+								a.title(href="category.html") Смотреть все 
+
+					li
+						a(href="contacts.html") Контакты
+					li
+						a.modal(href="profile.html") Мой профиль
+					li
+						a.basket(href="basket.html") Корзина #[span.orders 1]
+					li
+						a(href="payment.html") Доставка и Оплата			
+		div.wrapper
+			section#owl
+				div.owl-carousel
+					
+					div.owl-carousel-item(style="background: url('img/bg-1.png')")
+						div.owl__top
+						div.owl__central
+							a(href="")
+								img(src="img/logo.png")
+						div.owl__bottom
+						
+			section#intro
+				.container
+					.row
+						.col-xs-12
+							p Магический остров Бали... 
+							p Как только нога твоя касается земли этого острова, ты вбираешь его силу и энергию. Любовь и принятие, гармония наполняют твою душу и тело. Его магия создаёт мистический круговорот событий вокруг тебя. И жизнь твоя уже не будет прежней. Бали - обновление души и тела...
+			
+			div.popup
+				p.blue-p ВХОД В ВАШ АККАУНТ
+				form.my-form
+					div.input-group
+						input(placeholder="E-mail" type="email" required)
+						img.popup-icon(src='img/env.png' alt='E-mail')
+					div.input-group
+						input(placeholder="Пароль" type="password" required)
+						img.popup-icon(src='img/lock.png' alt='Пароль')
+					input.button(type="submit", value="ВОЙТИ" )
+					input.button(type="submit", value="ЗАРЕГИСТРИРОВАТЬСЯ" )
+					a.add(href="#popup-forget") Забыли пароль?
+			div.popup-forget#popup-forget
+				form.my-form
+					div.input-group
+						input(placeholder=" Укажите Ваш email:" type="email" required)
+					input.button(type="submit", value="ВОССТАНОВИТЬ")
+			div.popup-reg
+				p.blue-p РЕГИСТРАЦИЯ
+				form.my-form
+					div.input-group
+						input(placeholder="Имя:" type="text" required)
+						img.popup-icon(src='img/user.png' alt='Имя')
+					div.input-group
+						input(placeholder="E-mail:" type="email" required)
+						img.popup-icon(src='img/env.png' alt='E-mail')
+					div.input-group
+						input(placeholder="Пароль:" type="password" required)
+						img.popup-icon(src='img/lock.png' alt='Пароль')
+					div.input-group
+						input(placeholder="Адрес:" type="text" required)
+						img.popup-icon(src='img/adr.png' alt='Адрес')
+					div.input-group
+						input(placeholder="Телефон:" type="tel" required)
+						img.popup-icon(src='img/tel.ico' alt='Телефон')
+					input.button(type="submit", value="ЗАРЕГИСТРИРОВАТЬСЯ" )
+
+		div.popup
+			form.my-form
+				a.popup-close(href="#close") &times;
+				div.input-group
+					input(placeholder="Имя Фамилия")
+					span.popup-icon
+						i.fa.fa-user
+				div.input-group
+					input(placeholder="Телефон")
+					span.popup-icon
+						i.fa.fa-mobile
+				input.button(type="submit", value="Отправить" )
+		figure#scroll-top
+			a.slowly(href="#header" data-scroll)
+				i.fa.fa-chevron-up
+		include templates/footer

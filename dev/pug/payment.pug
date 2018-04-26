@@ -1,0 +1,68 @@
+doctype html
+html(amp lang="en")
+	include templates/head
+	body#top-scroll
+		div.overlay-bg
+		include templates/header
+		div.wrapper(style="background: url('img/bg-2.png')")
+			section#payments
+				.container
+					div.payment
+						.row
+							.col-xs-12
+								h2 ОПЛАТА И ДОСТАВКА
+						.row
+							.col-xs-12.col-md-6
+								div.delivery
+									img(src="img/delivery.png" alt="Доставка")
+									p Доставка производится на территории Украины.
+									p Бесплатная доставка при заказе от 2000 грн. (Новая Почта)
+									p Доставка в отделение Новой Почты …
+									p Доставка курьером по адресу (Новая Почта)
+									p Нашим партнером является компания Новая Почта.
+									p Отправка заказов осуществляется с Понедельника по Пятницу с 9.00-15.00.
+									p Адресная курьером на следующий рабочий день (Новая почта) - 45 грн.
+							.col-xs-12.col-md-6
+								div.delivery
+									img(src="img/wallet.png" alt="Оплата")
+									p Возможные варианты оплаты:
+									p.with-margin - картой Visa, MasterCard или через Приват24 на сайте при заказе; <br> - курьеру наличными при доставке заказа; <br> - в отделении Новая Почта при получении заказа;<br> - предоплата на карту ПриватБанка;<br> - оплата картой на сайте через платежные системы…
+									p Если у вас возникли вопросы - звоните нам по тел.: #[a(href="tel:0979922880") 0979922880], #[a(href="tel:0979052174") 0979052174] 
+									p Или напишите нам сообщение в форме ниже.
+								
+						.row
+							.col-xs-12
+								.row
+									.col-xs-12
+										p.blue-p НАПИШИТЕ НАМ
+								form.ask-form
+
+									.row
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Имя*
+												input(type="text")
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Тема*
+												input(type="text")
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) CAPTCHA*
+												div.g-recaptcha(data-sitekey="")
+												div.text-danger#recaptchaError
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Сообщение*
+												textarea(type="text")
+									.row
+										.col-xs-12
+											a.btn.send(href="#send-message") ОТПРАВИТЬ
+			div#send-message
+				p Сообщение отправлено.
+				span.close &times;
+		figure#scroll-top
+			a.slowly(href="#header" data-scroll)
+				i.fa.fa-chevron-up
+		include templates/footer
+

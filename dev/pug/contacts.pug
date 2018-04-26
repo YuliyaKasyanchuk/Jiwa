@@ -1,0 +1,104 @@
+doctype html
+html(amp lang="en")
+	include templates/head
+	body#top-scroll
+		div.overlay-bg
+		include templates/header
+		div.wrapper(style="background: url('img/bg-2.png')")
+			section#contacts
+				.container
+					.contacts
+						.row
+							.col-xs-12
+								h2 КОНТАКТЫ
+						.row
+							.col-xs-12.col-md-6
+								div.contacts-info
+									img(src="img/map.png" alt="Одесса, Украина")
+									span Одесса, Украина
+							.col-xs-12.col-md-6
+								div.contacts-info
+									img(src="img/mail.png" alt="jiwacintabali2017@gmail.com")
+									a.mail(href="mailto:jiwacintabali2017@gmail.com") jiwacintabali2017@gmail.com
+						.row
+							.col-xs-12.col-md-6
+								div.contacts-info
+									img(src="img/phone.png" alt="Карта")
+									div.phones
+										span 0979922880
+										span 0979922880
+									div.to-call
+										span Viber, What's app 
+										span.small *Звонки с 10.00 - 19.00
+							.col-xs-12.col-md-6
+								div.contacts-info
+									span Следите за нами в #[a(href="") Instagram] и #[a(href="") Facebook]
+						.row
+							.col-xs-12
+								h3 ПОДПИСАТЬСЯ НА НОВОСТИ
+								form.subscribe-form
+									div.input-group
+										label(required) Имя*
+										input(type="text")
+									div.input-group
+										label(required) E-mail*
+										input(type="mail")
+									button ПОДПИСАТЬСЯ
+						.row
+							.col-xs-12
+								form.ask-form
+									.row
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Имя*
+												input(type="text")
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Тема*
+												input(type="text")
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) CAPTCHA*
+												div.g-recaptcha(data-sitekey="")
+												div.text-danger#recaptchaError
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Сообщение*
+												textarea(type="text")
+									.row
+										.col-xs-12
+											a.btn.ask(href="#ask-question") ЗАДАТЬ ВОПРОС
+		div.ask-question
+			
+			p.blue-p ЗАДАТЬ ВОПРОС
+			span.close &times;
+			form.ask-form
+
+				.row
+					.col-xs-12.col-md-6
+						div.input-group
+							label(required) Имя*
+							input(type="text")
+					.col-xs-12.col-md-6
+						div.input-group
+							label(required) Тема*
+							input(type="text")
+					.col-xs-12.col-md-6
+						div.input-group
+							label(required) CAPTCHA*
+							div.g-recaptcha(data-sitekey="")
+							div.text-danger#recaptchaError
+					.col-xs-12.col-md-6
+						div.input-group
+							label(required) Сообщение*
+							textarea(type="text")
+				.row
+					.col-xs-12
+						a.btn.send(href="#send-message") Отправить
+		div#send-message
+			p Сообщение отправлено.
+			span.close &times;
+		figure#scroll-top
+			a.slowly(href="#header" data-scroll)
+				i.fa.fa-chevron-up
+		include templates/footer

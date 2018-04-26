@@ -1,0 +1,201 @@
+doctype html
+html(amp lang="en")
+	include templates/head
+	body#top-scroll
+		div.overlay-bg
+		include templates/header
+		div.wrapper(style="background: url('img/bg-2.png')")
+			section#basket
+				.container
+					.my-basket
+						.row
+							.col-xs-12
+								h2 КОРЗИНА
+							.col-xs-12
+								p.blue-p ПОКУПКИ
+						div.products
+							
+							div.products-item
+								.row
+									.col-xs-12.col-md-5
+										div.product-block
+											img(src="img/prod.png" alt="Продукт")
+											div.desc-block
+												p Маска для лица
+												p.price 120 #[span UAH]
+									.col-xs-12.col-md-7
+										div.buy-block
+											img.fl(src="img/delete_red.png" alt="Удалить")
+											div.amount-block
+												span.change.sign.min #[span -]
+												span.amount 1
+												span.change.sign.plu #[span +]
+											img.im(src="img/update.png" alt="Обновить")
+											p.price-span #[span.price-span 120] UAH
+								
+							div.products-item
+								.row
+									.col-xs-12.col-md-5
+										div.product-block
+											img(src="img/prod.png" alt="Продукт")
+											div.desc-block
+												p Кокосове масло
+												p.price 420 #[span UAH]
+									.col-xs-12.col-md-7
+										div.buy-block
+											img.fl(src="img/delete_red.png" alt="Удалить")
+											div.amount-block
+												span.change.sign.min #[span -]
+												span.amount 1
+												span.change.sign.plu #[span +]
+
+											img.im(src="img/update.png" alt="Обновить")
+											p.price-span #[span.price-span 420] UAH
+						
+							div.total
+								.row
+									.col-xs-6.col-sm-7.col-md-10
+										
+										p Всего
+									.col-xs-6.col-sm-5.col-md-2
+										
+										p#total-amount.total-amount #[span UAH]
+									div.profile
+										.row
+											.col-md-12
+												a.prof(href="profile.html") МОЙ ПРОФИЛЬ
+
+
+						.row
+							.col-xs-12
+								
+								p.blue-p ПОКУПКА БЕЗ РЕГИСТРАЦИИ #[span.info * Зарегистрированным покупателям предоставляется скидка 3%]
+
+
+								form.buy-form
+
+									.row
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) E-mail*
+												input(type="email")
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Имя*
+												input(type="text")
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Адресс доставки* ( при заказе Новой Почтой указывайте номер отделения)
+												input.adr(type="text")
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Телефон*
+												input(type="tel")
+										.col-xs-12.col-md-12
+											div.input-group
+												label(required) Комментарий
+												textarea(type="text")
+										// .col-xs-12.col-md-12
+										// 	p.info * Зарегистрированным покупателям предоставляется скидка 3%	
+										.col-xs-12.col-md-12
+											input#checkBox(type="checkbox")
+											label(for "checkBox") Подписаться на рассылку
+
+									.row
+										.col-xs-12
+											button ПОДТВЕРДИТЬ
+								div.show
+									.row
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Имя*
+												input(type="text")
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) E-mail*
+												input(type="email")
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Телефон*
+												input(type="tel")
+										.col-xs-12.col-md-6
+											div.input-group
+												label(required) Адресс доставки* ( при заказе Новой Почтой указывайте номер отделения)
+												input.adr(type="text")
+										
+										.col-xs-12.col-md-12
+											div.input-group
+												label(required) Комментарий
+												textarea(type="text")
+										
+										
+
+									.row
+										.col-xs-12.col-md-6
+											button ПОДТВЕРДИТЬ ДАННЫЕ
+										.col-xs-12.col-md-6
+											a.add.add-changes(href="#popup-change") ВНЕСТИ ИЗМЕНЕНИЯ
+								
+						div.pay
+							.row
+							
+								.col-xs-12.col-sm-6
+									p.blue-p #[img(src="img/delivery-white.png" alt="доставка")] ДОСТАВКА
+									div.radio
+										.input-group
+											input.radio#delivery-1(type="radio" name="delivery" checked) 
+											label(for="delivery-1") Бесплатная доставка при заказе от 2000 грн.
+										.input-group
+											input.radio#delivery-2(type="radio" name="delivery") 
+											label(for="delivery-2") Доставка на склад Новой Почты - ...грн.
+										.input-group
+											input.radio#delivery-3(type="radio" name="delivery") 
+											label(for="delivery-3") Доставка курьером по адресу (Новая Почта) - ...грн.
+										.input-group
+											input.radio#delivery-4(type="radio" name="delivery") 
+											label(for="delivery-4") Доставка курьером по г. Одесса - ...грн.
+
+								.col-xs-12.col-sm-6
+									p.blue-p #[img(src="img/wallet-white.png" alt="доставка")] ОПЛАТА
+									div.radio
+										.input-group
+											input.radio#payment-1(type="radio" name="payment" checked) 
+											label(for="payment-1") Бесплатная доставка при заказе от 2000 грн.
+										.input-group
+											input.radio#payment-2(type="radio" name="payment") 
+											label(for="payment-2") Доставка на склад Новой Почты - ...грн.
+										.input-group
+											input.radio#payment-3(type="radio" name="payment") 
+											label(for="payment-3") Доставка курьером по адресу (Новая Почта) - ...грн.
+							
+								.col-xs-12
+									a.btn.order(href="#make-order") ОФОРМИТЬ ЗАКАЗ
+		div#popup-change.popup-change
+			p.blue-p ДОБАВИТЬ ИЛИ ВНЕСТИ ИЗМЕНЕНИЯ
+			form.my-form
+				div.input-group
+					input(placeholder="Имя:" type="text" required)
+					img.popup-icon(src='img/user.png' alt='Имя')
+				div.input-group
+					input(placeholder="E-mail:" type="email" required)
+					img.popup-icon(src='img/env.png' alt='E-mail')
+				div.input-group
+					input(placeholder="Пароль:" type="password" required)
+					img.popup-icon(src='img/lock.png' alt='Пароль')
+				div.input-group
+					input(placeholder="Адрес:" type="text" required)
+					img.popup-icon(src='img/adr.png' alt='Адрес')
+				div.input-group
+					input(placeholder="Телефон:" type="tel" required)
+					img.popup-icon(src='img/tel.ico' alt='Телефон')
+				div.input-group
+					input#checkBox.inline(type="checkbox")
+					label.inline(for="checkBox") Подписаться на рассылку
+				input.button(type="submit", value="Внести изменения" )
+		div#make-order
+			p Ваш заказ оформлен
+			span.close &times;
+		figure#scroll-top
+			a.slowly(href="#header" data-scroll)
+				i.fa.fa-chevron-up
+		include templates/footer

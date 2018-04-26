@@ -1,0 +1,108 @@
+header#header
+	.container
+		.row
+			.col-xs-12
+				ul.header-menu__list.menu
+					li.logo-item
+						a(href="index.html")
+							img(src="img/logo-sm.png" alt="Jiwa")
+					li
+						a.active(href="index.html") Главная
+					li
+						a(href="about-us.html") О нас
+					li.dropdown
+						a.dropdown-toggle(href="category.html" data-toggle="dropdown") Магазин
+						ul.dropdown-menu.mini-menu
+							li
+								a.title.drop-menu(href="" data-toggle="dropdown") Бренды
+									ul.child
+										li
+											a.no-underline(href="brand.html") Bali Balance
+										li
+											a.no-underline(href="brand.html") Bali Radiance
+										li
+											a.no-underline(href="brand.html") Virgin Coconut Oil
+							li
+								a.title.drop-menu(href="" data-toggle="dropdown") Категории
+									ul.child
+										li
+											a.no-underline(href="category.html") Лицо
+										li
+											a.no-underline(href="category.html") Тело
+										li
+											a.no-underline(href="category.html") Ароматерапия
+										li
+											a.no-underline(href="category.html") Кокосовое Масло
+
+							li
+								a.title(href="category.html") Смотреть все 
+
+					li
+						a(href="contacts.html") Контакты
+					li
+						a.modal(href="profile.html") Мой профиль
+					li
+						a.basket-decor(href="basket.html") Корзина #[span.orders 1]
+				a.menu-link(href="#menu")
+					span
+				
+	div.menu-list
+		ul.menu
+			li.logo-item
+				a(href="index.html")
+					img(src="img/logo-sm.png" alt="Jiwa")
+			li
+				a.active(href="index.html") Главная
+			li
+				a(href="about-us.html") О нас
+			li.dropdown.has-sub
+				a.dropdown-toggle(href="category.html" data-toggle="dropdown") Магазин #[i.fa.fa-chevron-down.arrow]
+				ul.dropdown-menu.mini-menu
+					li.dropdown.has-sub
+						a.title.drop-menu(href="" data-toggle="dropdown") Бренды
+							ul
+								li
+									a.no-underline(href="brand.html") Bali Balance
+								li
+									a.no-underline(href="brand.html") Bali Radiance
+								li
+									a.no-underline(href="brand.html") Virgin Coconut Oil
+					li.dropdown.has-sub
+						a.title.drop-menu(href="" data-toggle="dropdown") Категории
+							ul
+								li
+									a.no-underline(href="category.html") Лицо
+								li
+									a.no-underline(href="category.html") Тело
+								li
+									a.no-underline(href="category.html") Ароматерапия
+								li
+									a.no-underline(href="category.html") Кокосовое Масло
+
+					li
+						a.title(href="category.html") Смотреть все 
+
+			li
+				a(href="contacts.html") Контакты
+			li
+				a.modal(href="profile.html") Мой профиль
+			li
+				a.basket(href="basket.html") Корзина #[span.orders 1]
+			li
+				a(href="payment.html") Доставка и Оплата
+				
+
+div.popup
+	form.my-form
+		a.popup-close(href="#close") &times;
+		div.input-group
+			input(placeholder="Имя Фамилия")
+			span.popup-icon
+				i.fa.fa-user
+		div.input-group
+			input(placeholder="Телефон")
+			span.popup-icon
+				i.fa.fa-mobile
+		input.button(type="submit", value="Отправить" )
+
+				

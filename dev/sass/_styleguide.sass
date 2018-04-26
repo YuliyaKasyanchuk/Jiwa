@@ -1,0 +1,157 @@
+@import "_vars.sass"
+
+//General
+
+html
+	width: 100%
+	display: block
+	height: 100%
+	height: auto
+	// min-height: 100% !important
+	font-size: 75%
+	@include respond-to(prelarge)
+		font-size: 62.5%
+	@include respond-to(desktop)
+		font-size: 50%
+	@include respond-to(mobil)
+		font-size: 37.5%
+
+*
+	outline: none 
+	box-sizing: border-box
+
+textarea
+	resize: none
+
+.hidden
+	display: none
+
+body
+	margin: 0
+	height: 100%
+	width: 100%
+	min-width: 300px
+	position: relative
+	font-size: 16px
+	line-height: 1.6
+	+bg(center center,auto,true)
+	font-weight: normal
+	+font('pfdintextcondpro')
+	color: $black
+	cursor: default
+	// overflow-x: hidden
+	text-align: center
+	display: table
+	min-height: 100vh
+	// height: auto
+	// height: auto
+	&.no-scroll
+		overflow: hidden
+		height: 100%
+.wrapper
+	// min-height: 100%
+	// height: auto !important
+	display: table-row
+	height: 100%
+	width: 100%
+	// min-height: 100%
+	// height: auto !important
+	// height: 100%
+	z-index: 1
+ul
+	list-style: none
+	padding-left: 0px
+	margin: 0
+
+a
+	text-decoration: none
+	+trans(.3s)
+	color: $black
+	&:hover
+		color: $blue
+
+
+h1,h2,h3,h4,h5,h6
+	margin: 0
+	+font('pfdintextcondpro')
+
+h1
+	text-transform: uppercase
+	font-size: 3.2rem
+	margin-bottom: 1.5rem
+	text-align: left
+
+h2
+	font-size:  4.4rem
+	text-align: left
+	color: $grey
+
+h3
+	font-size: 3rem
+	text-align: center
+	color: $grey
+		
+h4
+	color: $black
+	font-size: 2rem
+	margin-bottom: 1.2rem
+	text-align: left
+
+blockquote
+	text-align: center
+	font-size: 1.375em
+	font-style: italic
+	font-weight: 300
+
+p
+	font-size: 1.8rem
+	margin: 0
+	line-height: normal
+
+button, submit
+	font-size: 1.6rem
+	cursor: pointer
+	margin: 3rem 0
+	padding: 1rem 3rem
+	display: block
+	border-radius: 5px
+	text-transform: uppercase
+	+trans
+.button
+	font-size: 1.6rem
+	cursor: pointer
+	margin: 3rem 0
+	padding: 1rem 3rem
+	display: block
+	border-radius: 5px
+	text-transform: uppercase
+	+trans
+
+//FORM STYLE
+
+input[type="submit"]
+
+input[type="text"],textarea
+
+*::-webkit-input-placeholder
+	text-align: left
+	opacity: 1
+
+*:-moz-placeholder
+	text-align: left
+	opacity: 1
+
+*::-moz-placeholder
+	text-align: left
+	opacity: 1
+
+*:-ms-input-placeholder
+	text-align: left
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	text-align: left
+body input:required:valid,
+body textarea:required:valid
+	text-align: left

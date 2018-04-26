@@ -1,0 +1,57 @@
+doctype html
+html(amp lang="en")
+	include templates/head
+	body#top-scroll
+		div.overlay-bg
+		include templates/header
+		div.wrapper(style="background: url('img/bg-2.png')")
+			section#like
+				.container
+					.like-block
+						.row
+							h2 МНЕ ПОНРАВИЛОСЬ
+						.row
+							p.blue-p Я ХОЧУ
+						.row.center
+							.product-row
+								.col-xs-12.col-md-4
+									div.product-block
+										i.fa.fa-heart.dislike
+										img(src="img/prod.png" alt="Продукт")
+										div.desc-block
+											p Маска для лица
+											p.price 120 UAH
+								.col-xs-12.col-md-4
+									.btns-block
+										a.add(href="#add-to-basket") КУПИТЬ
+										
+										
+						.row.center
+							.product-row
+								.col-xs-12.col-md-4
+									div.product-block
+										i.fa.fa-heart.dislike
+										img(src="img/prod.png" alt="Продукт")
+										div.desc-block
+											p Кокосовое масло
+											p.price 420 UAH
+
+								.col-xs-12.col-md-4
+									.btns-block
+										a.add(href="#add-to-basket") КУПИТЬ
+										
+						.row.center
+							.product-row
+								.col-xs-12
+									button(type="button" class="lii" name="del" data-id="<?=$value->id;?>") Обновить
+		div#add-to-basket
+			
+			p Товар успешно добавлен в Корзину.
+			span.close &times;
+			div.btn-block
+				a.btn(href="basket.html")  Перейти в корзину
+				a.btn(href="category.html") Продолжить покупки
+		figure#scroll-top
+			a.slowly(href="#header" data-scroll)
+				i.fa.fa-chevron-up
+		include templates/footer

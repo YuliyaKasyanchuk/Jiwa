@@ -1,0 +1,386 @@
+@import "_vars.sass"
+@import "_styleguide.sass"
+
+header
+	width: 100%
+	padding: 0
+	background-color: $white
+	z-index: 5
+	position: relative
+	background-image: -moz-linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 54%, rgba(255,255,255,0.5) 81%, rgba(255,255,255,1) 100%)
+	background-image: -webkit-linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 54%, rgba(255,255,255,0.5) 81%, rgba(255,255,255,1) 100%)
+	background-image: -ms-linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.2) 54%, rgba(255,255,255,0.5) 81%, rgba(255,255,255,1) 100%)
+	box-shadow: 0px 2px 17px 0px rgba(0, 0, 0, 0.3)
+	.header-menu__list
+		width: 100%
+		height: 75px
+		display: inline-block
+		display: -webkit-inline-flex
+		display: -moz-inline-flex
+		display: -ms-inline-flex
+		display: -o-inline-flex
+		display: inline-flex
+		-webkit-justify-content: space-between
+		justify-content: space-between
+		-webkit-align-items: center
+		align-items: center
+		z-index: 2
+		@include respond-to(medium)
+			display: none
+		li
+			width: 20%
+			height: 100%
+			line-height: 75px
+			vertical-align: middle
+			display: inline-block
+			a
+				display: block
+				font-weight: 300
+				font-size: 2rem
+				width: 100%
+				height: 100%
+				// &:hover
+				// 	background-color: $blue
+				// 	color: $white
+				// &:active
+				// 	background-color: $blue
+				// 	color: $white
+				// &:focus
+				// 	background-color: $blue
+				// 	color: $white
+
+		li.logo-item
+			a
+				&:hover
+					background-color: transparent
+
+		.dropdown
+			position: relative
+			
+			.dropdown-toggle
+				position: relative
+
+			.dropdown-menu
+				background-color: $white
+				border: 1px solid #ccc
+				border: 1px solid rgba(0,0,0,.15)
+				border-radius: 4px
+				-webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175)
+				box-shadow: 0 6px 12px rgba(0,0,0,.175)
+				padding: 2rem 1rem 2rem 1rem
+				font-size: 1.4rem
+				text-align: left
+				width: 100%
+				z-index: 500
+				position: relative
+				display: none
+
+				
+				li
+					margin: 0
+					+trans
+					position: relative
+					// transform: scaleY(0)
+					// transform-origin: 0 0
+					// transition: .5s ease-in-out
+					// &:hover
+					// 	text-decoration: none
+					// 	.child
+					// 		visibility: visible
+					// 		opacity: 1
+					// 		// transform: scale(1)
+					// 		left: 150px
+					// 		a
+					// 			font-size: 1.8rem
+				li
+					display: block
+					line-height: initial
+					width: 100%
+					text-align: center
+					margin-bottom: 1rem
+					position: relative
+					&:hover
+						background-color: transparent
+					ul.child
+						background-color: $white
+						text-align: right
+						padding: 0
+						display: none 
+						a
+							font-size: 1.8rem
+							text-decoration: none
+							&:hover
+								text-decoration: underline
+								color: $black
+						// text-decoration: underline
+					// a
+					// 	font-size: 1.8rem
+						// text-decoration: none
+						// &:hover
+						// 	background-color: transparent
+						// 	text-decoration: underline
+						// 	color: $black
+					// .parent
+					// 	font-size: 1.8rem
+					// 	text-decoration: none
+					// 	color: $blue
+					// 	&:hover
+					// 		background-color: transparent
+					// 		text-decoration: underline
+					// 		color: $blue
+					// 		a.no-underline
+					// 			text-decoration: none
+		
+			
+			
+
+			// .clear
+			// 	border: none
+			// 	box-shadow: none
+			// 	li
+			// 		margin-bottom: 0
+					
+				.title
+					margin: 0
+					position: relative
+					// &:hover
+					// 	text-decoration: none
+					// 	.child
+					// 		display: block
+					// a
+					// 	font-size: 1.8rem
+					// 	text-decoration: none
+					// 	&:hover
+					// 		background-color: transparent
+					// 		text-decoration: underline
+	.open
+		// box-shadow: 0 0 10px rgba(96,207,190,0.8)
+		background-color: $white
+		@include respond-to(medium)
+			box-shadow: 0 0 10px rgba(96,207,190,0.8)
+	.menu-list
+		// top: 0
+		// background-color: rgba(0,0,0, 0.8)
+		// position: fixed
+		
+		// width: 100vw
+		// height: 100vh
+		// z-index: 60
+		// display: block
+		// right: -100vw
+		// -webkit-transition: all 0.5s
+		// -o-transition: all 0.5s
+		// transition: all 0.5s
+		// opacity: 0.8
+		// +flex
+		position: fixed
+		top: 0
+		left: -100vw
+		background-color: #F5F5F5
+		+trans
+		padding: 7rem 0rem
+		color: $grey
+		width: 100%
+		height: 100vh
+		overflow-y: scroll
+
+		// +flex
+		
+
+		&-active 
+			// right: 0
+			left: 0
+		.menu
+			margin-top: 5rem
+			+flex
+			flex-direction: column
+			z-index: 65
+			width: 100%
+			position: relative
+			li
+				width: auto
+				a
+					width: inherit
+					width: fit-content
+
+				// a
+				// 	width: 100%
+				// 	display: block
+				// 	&:hover
+				// 		background-color: rgba(255,255,255,.6)
+
+			.dropdown
+
+				position: relative
+				
+				.dropdown-menu
+					position: relative
+					border-radius: 0
+					background-color: #F5F5F5
+
+					li
+						a.title
+							font-weight: 400
+							padding: 0 8rem
+							
+
+						ul
+							position: relative
+							
+							background-color: #F5F5F5
+							display: none
+							@include respond-to(medium)
+								box-shadow: 0 0 10px rgba(96,207,190,0.8)
+							li
+								a
+									color: $black
+									padding: 0 12rem
+									font-weight: 400
+									&:hover
+										// box-shadow: 0 0 10px rgba(96,207,190,0.8)
+
+			.logo-item
+				display: none
+			li
+				display: block
+				width: 100%
+				&:hover
+					box-shadow: 0 0 10px rgba(96,207,190,0.8)
+
+				a
+					// color: $white
+					color: $grey
+					width: 100%
+					display: block
+					font-size: 3rem
+					line-height: 9rem
+					text-align: left
+					padding: 0 5rem
+					width: fit-content
+					position: relative
+					.orders
+						position: absolute
+						top: 0.5rem
+						left: 15rem
+						background-color: $blue
+						color: $white
+						padding: 0 1rem
+						line-height: 3rem
+						border-radius: 50%
+						width: 4rem
+						height: 4rem
+						+flex	
+					
+
+				.mini-menu
+					position: relative
+
+					box-shadow: 0 0 10px rgba(96,207,190,0.8)
+					display: none
+					li
+
+						.title
+							text-transform: none
+							@include respond-to(medium)
+								color: #000
+								margin: 0
+							ul
+								position: relative
+
+								display: none
+								li
+									
+	.basket
+		position: relative
+	.basket-decor
+		position: relative
+		width: fit-content
+		.orders
+			position: absolute
+			top: 35%
+			transform: translateY(-50%)
+			right: -1rem
+			width: 3rem
+			height: 3rem
+			background-color: $blue
+			color: $white
+			padding: 0 1rem
+			line-height: 3rem
+			border-radius: 50%
+			+flex
+			@include respond-to(small)
+				right: 35%
+			@include respond-to(mobil)
+				right: 30%						
+
+
+	.menu-link
+		z-index: 65
+		display: block
+		width: 50px
+		height: 50px
+		border: 2px solid $blue
+		box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4)
+		background-color: $white
+		position: fixed
+		top: 15px
+		right: 30px
+		display: none
+		@include respond-to(medium)
+			display: block
+		span
+			content: ''
+			margin-top: -1px
+			transition: all 0.2s
+			display: block
+			height: 2px
+			width: 30px
+			background-color: $blue
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			top: 50%
+			&:before
+				content: ''
+				transition: all 0.2s
+				display: block
+				height: 2px
+				width: 30px
+				background-color: $blue
+				position: absolute
+				left: 30%
+				top: 50%
+				margin-top: -10px
+				margin-left: -9px
+			&:after 
+				content: ''
+				transition: all 0.2s
+				display: block
+				height: 2px
+				width: 30px
+				background-color: $blue
+				position: absolute
+				left: 30%
+				top: 50%
+				margin-top: 8px
+				margin-left: -9px
+		&_active
+			span 
+				background-color: transparent
+				&:before 
+					-webkit-transform: rotate(45deg)
+					-ms-transform: rotate(45deg)
+					-o-transform: rotate(45deg)
+					transform: rotate(45deg)
+					margin-top: 0
+					width: 30px
+				&:after 
+					-webkit-transform: rotate(-45deg)
+					-ms-transform: rotate(-45deg)
+					-o-transform: rotate(-45deg)
+					transform: rotate(-45deg)
+					margin-top: 0
+					width: 30px
+
+
+
